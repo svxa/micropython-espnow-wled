@@ -20,7 +20,7 @@ import time
 # SEND_ON_AFTER: Time after which button press will send a regular button press instead of turning off the light
 # FLASH_AFTER_SETUP: Flash the LED twice after setup is complete
 
-PEER = b"\x84\xcc\xa8\x09\x6b\x44"
+PEER = b"\xff\xff\xff\xff\xff\xff" # Broadcast address; change to your WLED controller's MAC or leave as is
 WIFI_CHANNEL = 0
 BUTTON_NUMBER_PRESET = 20
 BUTTON_NUMBER_OFF = 2
