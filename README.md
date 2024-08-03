@@ -1,7 +1,11 @@
 # Micropython ESP-NOW WLED controller
+This repository sets up an M5Stack Atom S3 Lite to control a WLED instance via ESP-NOW.
+The button on the ESP allows you to turn on presets, cycle through them and turn off the WLED light.
+You can install the button anywhere in your house and activate your favorite presets even if wifi is down.
+The button does not run on batteries, it requires power.
+
 This script is designed to be used with a M5Stack Atom S3 Lite and a WLED device based on a 0.15.0 or later version.
 It was tested with WLED_0.15.0-b4_ESP32_audioreactive.bin from WLED.
-The button allows you to turn on presets, cycle through them and turn off the WLED light.
 
 If your presets do not activate night mode and you only want a single preset to be set, you can skip the `remote.json` and just change `BUTTON_NUMBER_PRESET` to 16 (preset 1), 17 (preset 2), 18 (preset 3), 19 (preset 4).
 
@@ -51,7 +55,7 @@ If you want to turn off the light after not having pressed the button for a whil
 - RGB_OFF_TIMOUT: Time to turn off RGB after button press
 - DEBOUNCE_OFF: Time after which button press will turn off the light instead of sending a regular button press
 - SEND_ON_AFTER: Time after which button press will send a regular button press instead of turning off the light
-- FLASH_AFTER_SETUP: Flash the LED twice after startup is complete
+- FLASH_AFTER_SETUP: Flash the LED twice after startup is complete, e.g. after power cycling the device or pressing the reset button
 
 ## Note on night light (timer) mode
 In the remote code of the WLED controller, any WizMote button press is followed by a turning off of the night light.
